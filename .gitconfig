@@ -1,0 +1,21 @@
+[alias]
+	co = checkout
+	ci = commit
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    cp = cherry-pick
+    pf = push --force-with-lease
+[core]
+	editor = vim
+[pull]
+	rebase = true
+[checkout]
+	defaultRemote = origin
+[user]
+	email = gogaz@gogaz.org
+	name = gogaz
+[fetch]
+	prune = true
+[diff]
+    colorMoved = plain
+[push]
+	autoSetupRemote = true

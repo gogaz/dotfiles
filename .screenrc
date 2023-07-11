@@ -1,0 +1,1 @@
+hardstatus alwayslastline "%{=b}%{G} %{= KW}%-w%{= wk}%50>%n %t%{-}%+w%<  %=%{kG}%c:%s  %D %d %M %Y "

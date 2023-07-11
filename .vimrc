@@ -63,10 +63,6 @@ colorscheme dracula
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%80v.\+/
 
-" Colors for autocompletion
-highlight Pmenu ctermbg=DarkGrey ctermfg=White
-highlight PmenuSel ctermbg=DarkRed ctermfg=White
-
 " plugin for auto-config per file (Makefile,...)
 filetype plugin indent on
 

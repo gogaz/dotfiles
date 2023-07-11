@@ -22,7 +22,13 @@ ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="%F{red}↯"
 
 setopt prompt_subst
 # PROMPT="[%*] %n:%c $(git_prompt_info)%(!.#.$) "
-PROMPT='[%*] %{$fg[yellow]%}%n%B%{$fg[blue]%}@%{$reset_color%}%{$fg[cyan]%}%M%{$reset_color%}:%{$fg[green]%}%~%{$reset_color%}% ${vcs_info_msg_0_}$(git_remote_status)%{$reset_color%} %(!.#.$) '
+if [[ "$(uname)" == "Darwin" ]]; then
+    # MacOS
+    PROMPT='[%*] %{$fg[green]%}%~%{$reset_color%}% ${vcs_info_msg_0_}$(git_remote_status)%{$reset_color%} %(!.#.$) '
+else
+    # Unix
+    PROMPT='[%*] %{$fg[yellow]%}%n%B%{$fg[blue]%}@%{$reset_color%}%{$fg[cyan]%}%M%{$reset_color%}:%{$fg[green]%}%~%{$reset_color%}% ${vcs_info_msg_0_}$(git_remote_status)%{$reset_color%} %(!.#.$) '
+fi
 
 #ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}("
 #ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%}"

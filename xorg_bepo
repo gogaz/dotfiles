@@ -1,0 +1,18 @@
+// fr-dvorak-bepo-intl
+// Adaptations du clavier bepo, basé sur le travail de Kaze :
+// http://bepo.fr/wiki/Utilisateur:Kaze/B%C3%A9po-intl
+// et dgellow:
+// https://gist.github.com/dgellow/5915994
+
+default
+xkb_symbols "custom_bepo" {
+	include "fr(bepo)"
+	name[Group1]="French (Custom bepo, by gogaz)";
+
+	// guillemets et chevrons en accès direct
+	key <AE02> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ less     , 2 , guillemotleft , leftdoublequotemark  ] }; // < 2 « “
+	key <AE03> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ greater  , 3 , guillemotright, rightdoublequotemark ] }; // > 3 » ”
+
+	// suppression de l'espace insécable en <Shift espace>
+	key <SPCE> { [           space,  space,    underscore,   nobreakspace ] }; // ␣ ␣ _ (espace insécable)
+};

@@ -1,0 +1,10 @@
+### Import new config files
+
+```sh
+./import.sh ~/.my-config-file ~/dotfiles/foo/config-file
+```
+
+### Setup
+```sh
+cat functions.zsh >> ~/.zshrc
+```
